@@ -41,7 +41,8 @@
     "husky": "^4.2.3",
     "prettier": "^2.0.3",
     "react": "^16.8.3",
-    "react-native": "^0.59.10"
+    "react-native": "^0.59.10",
+    "release-it": "^14.10.0"
   },
   "husky": {
     "hooks": {
@@ -50,5 +51,25 @@
   },
   "dependencies": {
     "buffer": "^6.0.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "skipChecks": true,
+      "ignoreVersion": true,
+      "tag": "latest"
+    },
+    "git": {
+      "requireBranch": "main",
+      "push": false,
+      "commit": false,
+      "requireCommits": true
+    }
   }
 }
